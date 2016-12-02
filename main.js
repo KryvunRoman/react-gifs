@@ -97,8 +97,7 @@ const LinksList = [
     'http://orig00.deviantart.net/0d77/f/2013/081/d/8/patty_cake_with_fluttershy_____by_mlpinkiepieofficial-d5yx0jj.gif',
     'http://rs1028.pbsrc.com/albums/y349/kerstinabersfelder21/received_393237594203800_zpsvoxwvzyw.gif~c200',
     'https://lh3.googleusercontent.com/-Vi0b5-pEAk8/AAAAAAAAAAI/AAAAAAAAAAA/OPtOxVg4K9I/photo.jpg',
-    'http://www.windows-addict.com/despicable/min.gif',
-    'http://nakleykiavto.ru.images.1c-bitrix-cdn.ru/upload/iblock/8cf/8cfebbe2a5e453f311547ac17f77c531.png?1448436950183991'
+    'http://www.windows-addict.com/despicable/min.gif'
 ];
 
 const Header = React.createClass({
@@ -128,15 +127,31 @@ const GifsList = React.createClass({
 });
 
 const RangomImage = React.createClass({
+    getInitialState() {
+        return {
+            gifURL: this.getRandomGif()
+        }
+    },
+
     getRandomGif() {
-        const randomLink = LinksList[Math.floor(Math.random() * LinksList.length)];
-        return randomLink;
+        return LinksList[Math.floor(Math.random() * LinksList.length)];
+    },
+
+    setRandomGif() {
+        this.setState({gifURL: this.getRandomGif()})
     },
 
     render() {
         return (
-            <div style={{textAlign: 'center'}}>
-                <img alt="" src={this.getRandomGif()} style={{height: 120}}/>
+            <div
+                className='main-gif__container'
+                onClick={this.setRandomGif}
+            >
+                <img
+                    alt="Main image"
+                    className='main-gif__image'
+                    src={this.state.gifURL}
+                />
             </div>
         );
     }
