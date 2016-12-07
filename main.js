@@ -97,7 +97,9 @@ const LinksList = [
     'http://orig00.deviantart.net/0d77/f/2013/081/d/8/patty_cake_with_fluttershy_____by_mlpinkiepieofficial-d5yx0jj.gif',
     'http://rs1028.pbsrc.com/albums/y349/kerstinabersfelder21/received_393237594203800_zpsvoxwvzyw.gif~c200',
     'https://lh3.googleusercontent.com/-Vi0b5-pEAk8/AAAAAAAAAAI/AAAAAAAAAAA/OPtOxVg4K9I/photo.jpg',
-    'http://www.windows-addict.com/despicable/min.gif'
+    'http://www.windows-addict.com/despicable/min.gif',
+    'http://media.boingboing.net/wp-content/uploads/2016/01/corgiswimflip.gif',
+    'http://bestanimations.com/Cartoons/Simpsons/the-simpsons-animated-gif-4.gif'
 ];
 
 const Header = React.createClass({
